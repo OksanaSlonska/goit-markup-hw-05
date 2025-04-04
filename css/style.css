@@ -515,7 +515,7 @@ img {
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
-
+  color: #ffffff;
   border: 1px solid #fff;
   border-radius: 4px;
   width: 264px;
@@ -529,7 +529,7 @@ img {
 }
 
 .footer-input::placeholder {
-  color: #fff;
+  color: #ffffff;
 }
 
 .footer-btn {
@@ -615,10 +615,34 @@ img {
   transform: translate(-50%, -100%);
 }
 
+/* .modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+} */
+
+.modal-field {
+  margin-bottom: 16px;
+}
+
 .modal-close-btn {
   position: absolute;
   top: 24px;
   right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #e7e9fc;
+  padding: 0;
+}
+
+.modal-icon-close {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover,
@@ -628,21 +652,7 @@ img {
 }
 
 .modal-close-btn:hover .modal-icon-close {
-  fill: white;
-}
-
-.modal-close-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  border: 1px solid 1px solid rgba(0, 0, 0, 0.1);
-  background-color: #e7e9fc;
-  padding: 0;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: #ffffff;
 }
 
 .modal-text {
@@ -744,22 +754,33 @@ img {
   }
 }
 
+.modal-field.checkbox-container {
+  margin-bottom: 24px;
+}
+
 .modal-checkbox {
   width: 16px;
   height: 16px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
+
   margin-right: 8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   fill: transparent;
+  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-check:checked + .modal-check-text .modal-checkbox {
   background-color: #404bbf;
   fill: #f4f4fd;
   border: none;
+}
+
+.modal-link{
+  color: #4d5ae5; 
+
 }
 
 .modal-btn {
